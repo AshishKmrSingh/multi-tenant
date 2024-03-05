@@ -1,0 +1,19 @@
+name: Add PRs and issues to utils project
+
+on:
+  issues:
+    types: [reopened, opened]
+  pull_request_target:
+    types: [reopened, opened]
+
+jobs:
+  add-to-project:
+    name: Add issue to project
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/add-to-project@v0.6.0
+        with:
+          project-url: https://github.com/AshishKmrSingh/multi-tenant
+          labeled: "Status: Stale"
+          label-operator: NOT
