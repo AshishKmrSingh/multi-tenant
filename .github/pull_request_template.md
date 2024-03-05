@@ -1,5 +1,6 @@
-<!-- Please refer to our contributing docs for any questions on submitting a pull request -->
-<!-- Issues are required for both bug fixes and features. -->
+Please refer to our [contributing docs](./CONTRIBUTING.md) for any questions on submitting a pull request
+Issues are required for both bug fixes and features.
+
 Resolves #ISSUE_NUMBER
 
 ----
