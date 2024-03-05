@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication(
-		exclude = { DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class}
+		exclude = { DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class},
 		scanBasePackages = { "com.example" }
 )
 public class Mars2MultitenantApplication {
