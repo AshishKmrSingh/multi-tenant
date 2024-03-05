@@ -20,7 +20,7 @@ body:
     attributes:
       label: Versions
       description: What versions of the relevant software are you running?
-      placeholder: Octokit.js v2.0.10, Node v16.18.0
+      placeholder: utils v2.43.0
     validations:
       required: true
   - type: textarea
@@ -35,7 +35,7 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](CODE_OF_CONDUCT.md)
+      description: By submitting this issue, you agree to follow our [Code of Conduct](./CODE_OF_CONDUCT.md)
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
