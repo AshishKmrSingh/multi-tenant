@@ -22,8 +22,6 @@ Resolves #ISSUE_NUMBER
 ### Does this introduce a breaking change?
 <!-- If this introduces a breaking change make sure to note it here any what the impact might be -->
 
-Please see our docs on [breaking changes](./breaking_changes.md) to help!
-
 - [ ] Yes
 - [ ] No
 
