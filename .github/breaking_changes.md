@@ -1,4 +1,4 @@
-What are breaking and non-breaking changes in the context of the [HARMAN](https://github.com/HARMANInt)?
+What are breaking and non-breaking changes in the context of [HARMAN](https://github.com/HARMANInt)?
 
 While the answer to that question might not always be clear we tend to follow what GitHub considers as breaking changes, 
 while also taking some inspiration from [Square](https://developer.squareup.com/docs/build-basics/versioning-overview)
