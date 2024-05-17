@@ -1,5 +1,5 @@
-[![Scorecard supply-chain security](https://github.com/AshishKmrSingh/multi-tenant/actions/workflows/scorecard.yml/badge.svg)](https://github.com/AshishKmrSingh/multi-tenant/actions/workflows/scorecard.yml)
 [![CodeQL](https://github.com/AshishKmrSingh/multi-tenant/actions/workflows/codeql.yml/badge.svg)](https://github.com/AshishKmrSingh/multi-tenant/actions/workflows/codeql.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/AshishKmrSingh/scorecard/badge)](https://scorecard.dev/viewer/?uri=github.com/AshishKmrSingh/multi-tenant)
 
 Spring Boot Hibernate Multi-tenant Demo
 ---------------------------------------
