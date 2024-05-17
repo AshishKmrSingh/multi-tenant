@@ -1,3 +1,6 @@
+[![Scorecard supply-chain security](https://github.com/AshishKmrSingh/multi-tenant/actions/workflows/scorecard.yml/badge.svg)](https://github.com/AshishKmrSingh/multi-tenant/actions/workflows/scorecard.yml)
+[![CodeQL](https://github.com/AshishKmrSingh/multi-tenant/actions/workflows/codeql.yml/badge.svg)](https://github.com/AshishKmrSingh/multi-tenant/actions/workflows/codeql.yml)
+
 Spring Boot Hibernate Multi-tenant Demo
 ---------------------------------------
 This sample project uses hibernate "SEPARATE DATABASE" multi-tenant strategy, and it also allows you to plugin new database (datasources) at runtime.
