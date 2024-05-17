@@ -2,6 +2,7 @@
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/AshishKmrSingh/multi-tenant/badge)](https://scorecard.dev/viewer/?uri=github.com/AshishKmrSingh/multi-tenant)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=AshishKmrSingh_multi-tenant&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=AshishKmrSingh_multi-tenant)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ea2fc4886cb040d99e1d5cfbf6d1bbb5)](https://app.codacy.com/gh/AshishKmrSingh/multi-tenant/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Known Vulnerabilities](https://snyk.io/test/github/AshishKmrSingh/multi-tenant/badge.svg)](https://snyk.io/test/github/AshishKmrSingh/multi-tenant)
 
 Spring Boot Hibernate Multi-tenant Demo
 ---------------------------------------
