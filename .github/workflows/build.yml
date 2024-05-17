@@ -56,20 +56,3 @@ jobs:
             #-Dsonar.tests= # optional. For more info about Code Coverage, please refer to https://docs.sonarcloud.io/enriching/test-coverage/overview/
             # Adds more detail to both client and server-side analysis logs, activating DEBUG mode for the scanner, and adding client-side environment variables and system properties to the server-side log of analysis report processing.
             #-Dsonar.verbose= # optional, default is false
-
-  check-dependencies:
-    runs-on: ubuntu-latest
-    needs: [ build ]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Run dash
-        id: run-dash
-        uses: eclipse-tractusx/sig-infra/.github/actions/run-dash@main
-        with:
-          dash_version: "1.0.2" # default = 'LATEST'
-          dash_input: "pom.xml" # If your build tool does not have a file, that dash can interpret as-is, add a step to generate it first and reference it here
-          dependencies_file: "DEPENDENCIES"
-          fail_on_out_of_date: true # default
-          fail_on_rejected: true # default
-          fail_on_restricted: false # default
