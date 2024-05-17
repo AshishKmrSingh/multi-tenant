@@ -1,5 +1,6 @@
 [![CodeQL](https://github.com/AshishKmrSingh/multi-tenant/actions/workflows/codeql.yml/badge.svg)](https://github.com/AshishKmrSingh/multi-tenant/actions/workflows/codeql.yml)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/AshishKmrSingh/multi-tenant/badge)](https://scorecard.dev/viewer/?uri=github.com/AshishKmrSingh/multi-tenant)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=AshishKmrSingh_multi-tenant&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=AshishKmrSingh_multi-tenant)
 
 Spring Boot Hibernate Multi-tenant Demo
 ---------------------------------------
