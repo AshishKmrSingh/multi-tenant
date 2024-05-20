@@ -21,4 +21,12 @@ public class Order {
 
     @Column(nullable = false, name = "date")
     private Date date;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 }
