@@ -58,7 +58,7 @@ jobs:
 
         # Synk Auth for CLI
       - name: Synk Auth
-        run: snyk auth $SNYK_TOKEN
+        run: snyk auth 8f4e7a36-17dd-44f5-8062-24a9d921ecda
 
         # Runs Snyk Open Source (SCA) analysis and uploads result to Snyk.
       - name: Snyk Open Source monitor
