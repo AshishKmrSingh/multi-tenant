@@ -1,6 +1,5 @@
-package com.example.interceptor;
+package com.example.entity;
 
-import com.example.entity.Order;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

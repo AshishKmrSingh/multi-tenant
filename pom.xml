@@ -21,7 +21,17 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
+		<java.version>17</java.version>
+		<java.17.options>
+			--add-opens=java.base/java.io=ALL-UNNAMED
+			--add-opens=java.base/java.lang=ALL-UNNAMED
+			--add-opens=java.base/java.math=ALL-UNNAMED
+			--add-opens=java.base/java.util=ALL-UNNAMED
+			--add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+			--add-opens=java.base/java.net=ALL-UNNAMED
+			--add-opens=java.base/java.text=ALL-UNNAMED
+			--add-opens=java.sql/java.sql=ALL-UNNAMED
+		</java.17.options>
 	</properties>
 
 	<dependencies>
@@ -78,8 +88,17 @@
 			<artifactId>json</artifactId>
 			<version>20070829</version>
 		</dependency>
-
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>6.1.2</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -87,10 +106,81 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
 				<configuration>
-					<downloadSources>true</downloadSources>
-					<downloadJavadocs>false</downloadJavadocs>
+					<source>17</source>
+					<target>17</target>
+					<compilerArgs>
+						<arg>--add-opens=java.base/java.io=ALL-UNNAMED</arg>
+						<arg>--add-opens=java.base/java.lang=ALL-UNNAMED</arg>
+						<arg>--add-opens=java.base/java.math=ALL-UNNAMED</arg>
+						<arg>--add-opens=java.base/java.util=ALL-UNNAMED</arg>
+						<arg>--add-opens=java.base/java.util.concurrent=ALL-UNNAMED</arg>
+						<arg>--add-opens=java.base/java.net=ALL-UNNAMED</arg>
+						<arg>--add-opens=java.base/java.text=ALL-UNNAMED</arg>
+						<arg>--add-opens=java.sql/java.sql=ALL-UNNAMED</arg>
+					</compilerArgs>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.1</version>
+				<configuration>
+					<forkCount>3</forkCount>
+					<reuseForks>false</reuseForks>
+					<forkMode>pertest</forkMode>
+					<argLine>
+						${surefireArgLine}
+						${java.17.options}
+					</argLine>
+					<childDelegation>true</childDelegation>
+					<skipTests>false</skipTests>
+					<runOrder>alphabetical</runOrder>
+					<trimStackTrace>false</trimStackTrace>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.8</version>
+				<configuration>
+					<excludes>
+						<exclude>**/**.jar</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>pre-unit-test</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+						<configuration>
+							<destFile>${jacoco.ut.execution.data.file}</destFile>
+							<propertyName>surefireArgLine</propertyName>
+						</configuration>
+					</execution>
+					<execution>
+						<id>post-unit-test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+						<configuration>
+							<dataFile>${jacoco.ut.execution.data.file}</dataFile>
+							<outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 
 		</plugins>
