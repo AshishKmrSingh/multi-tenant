@@ -12,6 +12,6 @@ jobs:
           path: scancode-inputs
       - uses: nexB/scancode-action@alpha
         with:
-          pipelines: "scan_codebase,find_vulnerabilities"
+          pipelines: "find_vulnerabilities"
         env:
           VULNERABLECODE_URL: https://public.vulnerablecode.io/
