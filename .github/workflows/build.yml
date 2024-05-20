@@ -24,18 +24,12 @@ jobs:
           cache: maven
       - name: Build with Maven
         run: mvn clean install -e -X sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=AshishKmrSingh_multi-tenant -Dsonar.organization=ashishpersonal
-
-  check-licenses:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
+      - name: Run codacy-coverage-reporter
+        uses: codacy/codacy-coverage-reporter-action@v1
         with:
-          java-version: '17'
-          distribution: 'temurin'
-          cache: maven
-      - name: Generate List of dependencies
-        run: mvn verify dependency:list -DskipTests -Dmaven.javadoc.skip=true -DappendOutput=true -DoutputFile=maven.deps
-      - name: Run Eclipse Dash to generate DEPENDENCIES file
-        run: java -jar eclipse-dash/org.eclipse.dash.licenses-1.1.1.jar maven.deps
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          # or
+          # api-token: ${{ secrets.CODACY_API_TOKEN }}
+          coverage-reports: target/site/jacoco/jacoco.xml,target/site/jacoco-ut/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+          # or a comma-separated list for multiple reports
+          # coverage-reports: <PATH_TO_REPORT>, <PATH_TO_REPORT>
