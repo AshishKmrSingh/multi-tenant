@@ -1,4 +1,4 @@
-name: Build & SONAR
+name: License Compliance
 
 on:
   push:
