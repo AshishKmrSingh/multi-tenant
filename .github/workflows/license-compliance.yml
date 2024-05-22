@@ -24,9 +24,9 @@ jobs:
           cache: maven
       - name: Generate List of dependencies
         run: mvn verify dependency:list -DskipTests -Dmaven.javadoc.skip=true -DappendOutput=true -DoutputFile=maven.deps
+      - name: Run Eclipse Dash to generate DEPENDENCIES file
+        run: java -jar eclipse-dash/org.eclipse.dash.licenses-1.1.1.jar maven.deps -summary DEPENDENCIES
       - uses: actions/upload-artifact@v4
         with:
           name: LICENSE_INFO
-          path: maven.deps
-      - name: Run Eclipse Dash to generate DEPENDENCIES file
-        run: java -jar eclipse-dash/org.eclipse.dash.licenses-1.1.1.jar maven.deps
+          path: DEPENDENCIES
