@@ -219,5 +219,15 @@
 		</pluginRepository>
 	</pluginRepositories>
 
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub HARMAN Automotive Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/AshishKmrSingh/multi-tenant</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</distributionManagement>
 
 </project>
