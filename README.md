@@ -1,3 +1,15 @@
+<!--
+ * Copyright (C) 2020,2022 Eclipse Foundation and others. 
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ * 
+ * SPDX-FileType: DOCUMENTATION
+ * SPDX-FileCopyrightText: 2024 Ashish Kumar Singh
+ * SPDX-License-Identifier: Apache-2.0
+-->
+
 [![CodeQL](https://github.com/AshishKmrSingh/multi-tenant/actions/workflows/codeql.yml/badge.svg)](https://github.com/AshishKmrSingh/multi-tenant/actions/workflows/codeql.yml)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/AshishKmrSingh/multi-tenant/badge)](https://scorecard.dev/viewer/?uri=github.com/AshishKmrSingh/multi-tenant)
 [![SONAR Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=AshishKmrSingh_multi-tenant&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=AshishKmrSingh_multi-tenant)
