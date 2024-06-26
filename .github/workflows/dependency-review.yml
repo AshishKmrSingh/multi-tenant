@@ -1,12 +1,14 @@
-# Dependency Review Action
 #
-# This Action will scan dependency manifest files that change as part of a Pull Request,
-# surfacing known-vulnerable versions of the packages declared or updated in the PR.
-# Once installed, if the workflow run is marked as required, PRs introducing known-vulnerable
-# packages will be blocked from merging.
+# Copyright (C) 2020,2022 Eclipse Foundation and others.
 #
-# Source repository: https://github.com/actions/dependency-review-action
-# Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
+# This program and the accompanying materials are made available under the
+# terms of the Eclipse Public License v. 2.0 which is available at
+# http://www.eclipse.org/legal/epl-2.0.
+#
+# SPDX-FileType: DOCUMENTATION
+# SPDX-FileCopyrightText: 2024 Ashish Kumar Singh
+# SPDX-License-Identifier: Apache-2.0
+#
 name: 'Dependency review'
 on:
   pull_request:

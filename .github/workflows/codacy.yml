@@ -1,15 +1,14 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# This workflow checks out code, performs a Codacy security scan
-# and integrates the results with the
-# GitHub Advanced Security code scanning feature.  For more information on
-# the Codacy security scan action usage and parameters, see
-# https://github.com/codacy/codacy-analysis-cli-action.
-# For more information on Codacy Analysis CLI in general, see
-# https://github.com/codacy/codacy-analysis-cli.
+#
+# Copyright (C) 2020,2022 Eclipse Foundation and others.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Eclipse Public License v. 2.0 which is available at
+# http://www.eclipse.org/legal/epl-2.0.
+#
+# SPDX-FileType: DOCUMENTATION
+# SPDX-FileCopyrightText: 2024 Ashish Kumar Singh
+# SPDX-License-Identifier: Apache-2.0
+#
 
 name: Codacy Security Scan
 
