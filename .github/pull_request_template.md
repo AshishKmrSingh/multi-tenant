@@ -16,7 +16,7 @@ Resolves #ISSUE_NUMBER
 * 
 
 ### Pull request checklist
-- [ ] Tests for the changes have been added (for bug fixes / features)
+- [ ] Tests for the changes have been added (for bug fixes/features)
 - [ ] Docs have been reviewed and added / updated if needed (for bug fixes / features)
 
 ### Does this introduce a breaking change?
