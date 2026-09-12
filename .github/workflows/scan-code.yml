@@ -15,13 +15,13 @@ on: [push]
 
 jobs:
   scan-codebase:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     name: Scan codebase with ScanCode.io
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           path: scancode-inputs
-      - uses: nexB/scancode-action@alpha
+      - uses: nexB/scancode-action@6cebf8d6dee2226d554a283ae57d002a2cc10e65 # alpha
         with:
           pipelines: "find_vulnerabilities"
         env:
